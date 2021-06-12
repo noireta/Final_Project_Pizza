@@ -509,6 +509,7 @@ $('inputCardNumber').addEventListener("blur",(e)=>{
     }
 })
 
+
 $('paymentCVC').addEventListener("blur",(e)=>{
     if ( !validateCVC($('paymentCVC')) )
     {
