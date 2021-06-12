@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+		integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+		crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+		integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+		crossorigin="anonymous" />
+    <link href="CSS/styles.css" rel="stylesheet">
+  
+    <title>Final_Pizza_Project</title>
+  </head>
+  <body>
+  
+      <div class="bg">
+         <!--Get order-->
+          <div class="container">
+            <div class="row">
+                <div class="col">
+                  <img src="./image/logo.jpg" class="rounded-circle" alt="logo" width="150" height="150">
+                </div>
+                <div class="col-8">
+                  <br>
+                     
+                    <h3>Pizza is one of the most popular foods in the world, and for good reason! It’s affordable, delicious, and there’s an option for everyone.</h3>
+                    
+               </div>
+
+           </div>
+          </div>
+          <br>
+          <div class=" container p-5 mb-4 bg-light rounded-3">
+              <div class= "col-lg-12 offset-lg-3 py-5">
+                <h1 class="display-5 fw-bold" >Lazy or busy to cook?</h1>
+                <p class="col-md-8 fs-4">No big deal, You are enjoying yourself with your family. We are for you.
+                       “There’s no better feeling in the world than a warm pizza box in your lap.”
+                </p>
+                <p class="col-md-8 fs-4 fw-bold">Please order your Pizza by follow these step.</p>
+                <button id="getOrder" class="btn btn-primary btn-lg" >Order Now</button>
+              </div>
+          </div>
+          <!--end-->
+           <!--Delivery Details-->
+          <div class="col-md-12">
+            <form class="col-lg-12 offset-lg-3" id="mainForm">
+              <div class="row">
+               <div id="customerInfo" class="invisible"> 
+                <h3>Personal Details:</h3>
+          
+                <div class="col-md-6">
+                      <label for="name" class="form-label">Name:</label>
+                      <input type="text" class="form-control" id="shipCustomerName">
+                </div>
+                <br>
+                <div class="col-md-6">
+                      <label for="street" class="form-label">Street Address</label>
+                      <input type="text" class="form-control" id="shipCustomerStreet">
+                </div>
+                <div class="col-md-6">
+                  <label for="address" class="form-label">Address 2</label>
+                      <select id="inputAddressType" class="form-select">
+                        <option selected>House</option>
+     
+                        <option>Apartment</option>
+                        <option>Business</option>
+                        <option>Campus</option>
+                        <option>Hotel</option>
+                        <option>Dorm</option>
+                        <option>Other</option>
+                      </select>
+                </div>
+            
+                <div class="col-md-6">
+                      <label for="cityName" class="form-label">City:</label>
+                      <input type="text" class="form-control" id="shipCustomerCity">
+                </div>
+                <div class="col-md-6">
+                    <label for="stateName" class="form-label">State:</label>
+                    <select id="inputState" class="form-select">
+                      <option value="-1">Select State</option>
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="DC">District Of Columbia</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="zipCode" class="form-label">Zip:</label>
+                    <input type="text" class="form-control" id="shipCustomerZip">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="emailAdd" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="shipCustomerEmail">
+                </div>
+                <div class="col-md-6">
+                    <label for="phoneNumber" class="form-label">PhoneNumber:</label>
+                    <input type="text" class="form-control" id="shipCustomerPhoneNumber">
+                </div>
+                <br>
+                <div class="col-md-6">
+                  <button id="validateShipDetails" class="btn btn-primary btn-lg" >Build Pizza</button>
+                </div>
+            
+              </div>
+                
+                <!--Build your Pizza-->
+                <br>
+                <div id="pizzaBuild" class="col-md-6 invisible"> 
+
+                  <h3>Build your Pizza:</h3>
+
+
+                  <div class="btn-group" role="group" id="doughselector">
+                        <input class="btn-check" type="radio" name="exampleRadios" id="exampleRadios1" value="0" >
+                        <label class="btn btn-secondary border border-dark border border-1" for="exampleRadios1">Hand Tossed
+                        </label>
+                  
+
+                          <input class="btn-check" type="radio" name="exampleRadios" id="exampleRadios2" value="1" >
+                          <label class="btn btn-secondary border border-dark border border-1" for="exampleRadios2">Thin Crust
+                          </label>
+           
+
+                  
+                            <input class="btn-check" type="radio" name="exampleRadios" id="exampleRadios3" value="2">
+                            <label class="btn btn-secondary  border border-dark border border-1" for="exampleRadios3">New York Style
+                            </label>
+                
+                      
+                            <input class="btn-check" type="radio" name="exampleRadios" id="exampleRadios4" value="3">
+                            <label class="btn btn-secondary  border border-dark border border-1" for="exampleRadios4">Gluten Free</label>
+                  </div>
+                        
+                      <br>
+                            <h3> Choose your Pizza size and price:</h3>
+                      <div class="col-md-6">
+                            <label id="sizePriceLabel" for="pizzaSizePrice" class="form-label">Hand tossed Sizeand Price</label>
+                          <select id="pizzaSizePrice" class="form-select">
+                              <option value="-1" selected>Choose Size</option>
+                              <!--
+                              <option value="9.99">Small($9.99)</option>
+                              <option value="12.99">Medium($12.99)</option>
+                              <option value="14.99">Large($14.99)</option>
+                              -->
+                          </select>
+                      </div>
+                        
+                        <br>
+                          <!-- choose Cheese -->
+                            <h3> Choose Cheese for your pizza :</h3>
+                      <div class="col-md-6">
+                              <label for="cheeseOption" class="form-label">Cheese Option:</label>
+                            <select id="cheeseOption" class="form-select" disabled>
+                                <option value ="-1"selected>Select Cheese </option>
+                                <option value="0">Light:no charge</option>
+                                <option value="0"> Normal(default):no charge</option>
+                                <option value="2.99"> Extra:+$2.99</option>
+                                <option value="3.99"> Double:+$3.99</option>
+                            </select>
+                      </div>
+                          <!--Choose  Sauce -->
+                        <br>
+                            <h3> Choose sauce for your pizza :</h3>
+                        <div class="col-md-6">
+                              <label for="sauceOption" class="form-label">Sause Option:</label>
+                            <select id="sauceOption" class="form-select" disabled>
+                              <option value="-1">Select sauce</option>
+                              <option value="0">Regular Tomato:no charge</option>
+                              <option value=".99"> Hearty Tomato:+$.99</option>
+                              <option value="1.99"> BBQ Sause:+$1.99</option>
+                            </select>
+                        </div>
+                                                            
+                          <!-- Choose Topping -->
+                      <div class="form-horizontal">
+                      <br> 
+                              <h3> Choose Topping $0.99 for each :</h3>
+                          <br> 
+
+                          <div  id="pizzaToppins">
+                              
+                                <input class="form-check-input" type="checkbox" value="" id="top-pep" >
+                                <label class="form-check-label" for="top-pep">
+                                Pepperroni
+                                </label>
+                              
+                           
+                          
+                                <input class="form-check-input" type="checkbox" value="" id="top-ham">
+                                <label class="form-check-label" for="top-ham">
+                                Ham
+                                </label>
+                              
+                      
+                                <input class="form-check-input" type="checkbox" value="" id="top-bacon">
+                                <label class="form-check-label" for="top-bacon">
+                                  Bacon
+                                </label>
+                    
+                                <input class="form-check-input" type="checkbox" value="" id="top-salami">
+                                <label class="form-check-label" for="top-salami">
+                                  Salami
+                                </label>
+                       
+                                <input class="form-check-input" type="checkbox" value="" id="top-pepper">
+                                <label class="form-check-label" for="top-pepper">
+                                  Pepper
+                                </label>
+                
+                                <input class="form-check-input" type="checkbox" value="" id="top-olive">
+                                <label class="form-check-label" for="top-olive">
+                                  Olives
+                                </label>
+                          
+                            <br> <br>
+                        
+                                <input class="form-check-input" type="checkbox" value="" id="top-jalapenos">
+                                <label class="form-check-label" for="top-jalapenos">
+                                  Jalapenos
+                                </label>
+                         
+                                <input class="form-check-input" type="checkbox" value="" id="top-mushroom">
+                                <label class="form-check-label" for="top-mushroom">
+                                  Mushrooms
+                                </label>
+                        
+                                <input class="form-check-input" type="checkbox" value="" id="top-pinea">
+                                <label class="form-check-label" for="top-pinea">
+                                  Pineapple
+                                </label>
+            
+                                <input class="form-check-input" type="checkbox" value="" id="top-onion">
+                                <label class="form-check-label" for="top-onion">
+                                  Onion
+                                </label>
+                          </div>
+                      
+                            <br> 
+                        </div>  
+                                            
+                          <h3> Conform your order for Pizza :</h3>
+                          <div class="form-horizontal"> 
+
+                          <div class="form-check  form-check-inline" id="orderConfirmation">
+                            <input class="form-check-input" type="checkbox" value="" id="confirmOrder">
+                            <label class="form-check-label" for="confirmOrder">
+                            Confirm order
+                            </label>
+                          </div>
+                          <div class="form-check  form-check-inline" id="orderCancellation">
+                            <input class="form-check-input" type="checkbox" value="" id="cancelOrder">
+                            <label class="form-check-label" for="cancelOrder">
+                              Cancel order
+                            </label>
+                          </div>
+                          <br><br>
+                        <div class="col-12">
+                          <button class="btn btn-primary" id="goToPayment">Finished Building Pizza</button>
+                        </div>
+                      </div>
+                </div><!--div_2 end -->
+                <div id="shoppingCart" class="col-md-6 card invisible" style="height: 50rem">
+                <div class="card-body">
+                      <h5 class="card-title">Checkout Total</h5>
+                      <p class="card-text">Please pay this amount</p>
+                    </div>
+                      <ul class="list-group list-group-flush" id="paymentItems">
+                      </ul>
+                    <div class="card-body">
+                       <p class="card-text">Total Amount Due<p>
+                       <p class="card-text" id="payTotal">0</p>
+                  </div>
+                  
+                </div>
+                <br>
+                <!-- Finished Building Pizza end-->
+                <!-- Payment Information -->
+                <div id="paymentInfo" class="invisible"> 
+                    <h3> Payment Information :</h3>
+                    <div class="form-check  form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="paymentAddressCheck">
+                      <label class="form-check-label" for="paymentAddressCheck">
+                        Same as delivery Information:
+                      </label>
+                    </div>
+                    <div class="col-md-6">
+                              <label for="paymentName" class="form-label">Name:</label>
+                              <input type="text" class="form-control" id="paymentName">
+                    </div>
+                    <br>
+
+                    <div class="col-md-6">
+                            <label for="paymentStreetAddress" class="form-label">Street Address</label>
+                            <input type="text" class="form-control" id="paymentStreetAddress">
+                      </div>
+                      <div class="col-md-6">
+                            <label for="paymentAddType" class="form-label">Address 2</label>
+                            <select id="paymentAddType" class="form-select">
+                                <option selected>House</option>
+                                <option>Apartment</option>
+                                <option>Business</option>
+                                <option>Campus</option>
+                                <option>Hotel</option>
+                                <option>Dorm</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                      
+                      <div class="col-md-6">
+                          <label for="paymentCity" class="form-label">City:</label>
+                          <input type="text" class="form-control" id="paymentCity">
+                      </div>
+                        <div class="col-md-6">
+                            <label for="paymentState" class="form-label">State:</label>
+                              <select id="paymentState" class="form-select">
+                                <option value="-1">Select State</option>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="DC">District Of Columbia</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                                                          
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="paymentZip" class="form-label">Zip:</label>
+                            <input type="text" class="form-control" id="paymentZip">
+                      </div>
+                      <br>
+                  <!-- Credit card Information -->
+                            <h3> Credit Card Information :</h3>
+                  <div class="col-md-6">
+                          <label for="inputCardNumber" class="form-label">Credit Card Number:</label>
+                          <input type="text" class="form-control" id="inputCardNumber">
+                  </div>
+                  <div class="col-md-6">
+                          <label for="paymentCVC" class="form-label">CVC Code: </label>
+                          <input type="text" class="form-control" maxlength="3" id="paymentCVC">
+                  </div>
+                  <div class="col-md-6">
+                        <label for="inputZip" class="form-label">Expiration Date of Month</label>
+                        <select id="inputState" class="form-select">
+                      <option >1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>12</option>
+                      </select>
+                  </div>
+                  <div class="col-md-6">
+                      <label for="inputZip" class="form-label">Expiration Date of Year</label>
+                      <select id="inputState" class="form-select">
+                          <option >2021</option>
+                          <option>2022</option>
+                          <option>2023</option>
+                          <option>2025</option>
+                          <option>2026</option>
+                          <option>2027</option>
+                          <option>2028</option>
+                          <option>2029</option>
+                          <option>2030</option>
+                          <option selected>2031</option>
+                      </select>
+                  </div>  
+                  <br>
+                  <!-- Process Paymet -->
+                  <div class="col-12">
+                        <button type="submit" class="btn btn-primary" id="payOrder"> Now Payment</button>
+                  </div> 
+                </div> 
+            </form>
+          </div>
+      </div>
+    
+  </body>
+  <script src="JS/script.js"></script>
+</html>  
+
+
+
+          
+                
+
+
+
+        
